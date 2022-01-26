@@ -80,14 +80,11 @@ h1 {
     background-color: #b5ffb5;
 }
 
-
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+
     width: 100%;
     padding: 15px;
     font-size: 26px;
@@ -98,4 +95,39 @@ h1 {
     width: 20px;
     height: 20px;
     cursor: pointer;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-card {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border: 1px solid #383838;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 80%;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    transition: 0.3s ease-in-out;
+}
+
+img:hover {
+    width: 160px;
+    height: auto;
 }
