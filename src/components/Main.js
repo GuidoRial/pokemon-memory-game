@@ -10,10 +10,10 @@ const Main = () => {
     //Everytime clickedPokemons changes, reload cards
     useEffect(() => {
         const loadCards = async () => {
-            setPokemons(await getPokemon(20));
+            setPokemons(await getPokemon(21));
         };
         loadCards();
-    }, [clickedPokemons]);
+    }, []);
 
     //Function to fetch the pokemons
     async function getPokemon(number) {
@@ -44,13 +44,7 @@ const Main = () => {
     const handleCardClick = (e) => {
         const pokemonName = e.target.parentNode.lastChild.textContent;
         playRound(pokemonName);
-        setPokemons([])
-        getPokemon(20)
-    };
-
-    const resetGame = () => {
-        setCurrentScore(0);
-        setClickedPokemons([]);
+        shuffleArray(pokemons);
     };
 
     const playRound = (pokemonName) => {
@@ -62,15 +56,18 @@ const Main = () => {
                 setBestScore(newScore);
                 setCurrentScore(newScore);
                 setClickedPokemons((prevState) => [...prevState, pokemonName]);
-            }
+            } else if (newScore <= bestScore) {
+                setCurrentScore(newScore);
+                setClickedPokemons((prevState) => [...prevState, pokemonName]);
+            } 
         }
     };
 
-    //Modal that explains the game
-    //When someone clics a card adds 1 to score and adds that element to another array, then render cards again
-    //If score > maxscore, maxscore = score
-    //when a card gets pressed again, score = 0 annd comparason array = []
-    //When maxScore = 20 add a modal that says "you won!"
+    const resetGame = () => {
+        setClickedPokemons([]);
+        setCurrentScore(0);
+    };
+
     return (
         <div>
             <div className="scoreboard">

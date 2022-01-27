@@ -131,3 +131,30 @@ img {
     width: 160px;
     height: auto;
 }
+
+.tutorial-container {
+    width: 50%;
+    height: 50%;
+
+}
+
+.tutorial {
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #383838;
+    text-align: center;
+    background-color: white;
+}
+
+.tutorial > button {
+    width: 15%;
+    height: 15%;
+    cursor: pointer;
+}
+
