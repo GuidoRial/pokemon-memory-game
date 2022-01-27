@@ -127,7 +127,7 @@ img {
     transition: 0.3s ease-in-out;
 }
 
-img:hover {
+.pokemon-card > img:hover {
     width: 160px;
     height: auto;
 }
