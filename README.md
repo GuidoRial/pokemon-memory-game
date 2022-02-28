@@ -6,12 +6,13 @@ https://guidorial.github.io/pokemon-memory-game/
 
 ### How to play
 
-It's a fairly easy game, you get 21 Pokemon cards with the name and photo of each Pokemon.
+It's a fairly easy game to test your memory, you get 21 Pokemon cards with the name and photo of each Pokemon.
 
 1. You click on one and have to remember that you clicked on it
 2. The cards shuffle
 3. You have to click on another Pokemon
 4. Repeat until you click on a clicked Pokemon or win.
+5. If you lose, you'd be told how many you got right
 
 ## Project Description
 
